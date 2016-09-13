@@ -15,10 +15,8 @@ module.exports = class Deck {
   constructor() {
     theDeck = this.createDeck(theDeck);
   }
-  getNumberOfCards() {
-    return CARDSINDECK;
-  }
 
+  // Creates the deck by adding each rank / suit into a single array of type Card
   createDeck(theDeck) {
     for (var n =0; n < SUITS.length; n++) {
       for (var m = 0; m < RANK.length; m++) {
@@ -28,10 +26,16 @@ module.exports = class Deck {
     return theDeck;
   }
 
+  // returns number of cards in deck
+  getNumberOfCards() {
+    return CARDSINDECK;
+  }
+  // returns the Deck as an object
   getDeck() {
     return theDeck;
   }
 
+  // returns the card based upon which card was selected.  If 0 was passed, the top of the deck would be returned
   pickACardAnyCard(whichCard) {
     console.log('Your card is the: ' + theDeck[whichCard].showCard());
   }
@@ -40,11 +44,10 @@ module.exports = class Deck {
     var tempCard;
     var cardIndex;
     for (var x = 0; x < theDeck.length; x++){
-
       cardIndex = Math.floor(Math.random() * CARDSINDECK);
-      console.log(cardIndex);
+  //    console.log(cardIndex);
       tempCard = theDeck[x];
-      if (theDeck[cardIndex] === undefined) { console.log('Index of ' + cardIndex);}
+  //    if (theDeck[cardIndex] === undefined) { console.log('Index of ' + cardIndex);}
       theDeck[x] = theDeck[cardIndex];
       theDeck[cardIndex] = tempCard;
     }

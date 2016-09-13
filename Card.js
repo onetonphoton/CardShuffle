@@ -10,9 +10,12 @@ module.exports = class Card{
       this.suit = suit;
     }
 
+    // returns the selected card
     getCard() {
       return this;
     }
+
+    // shows the card
     showCard() {
       return this.rank + ' of ' + this.suit;
     }
