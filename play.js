@@ -21,3 +21,4 @@ console.log(aDeck.getDeck());
 
 // Randomly pull a card from the deck (this could be changed to deal the top card of the deck by replacing it with requesting 0
 aDeck.pickACardAnyCard(Math.floor(Math.random() * aDeck.getNumberOfCards()));
+//aDeck.pickACardAnyCard(0);

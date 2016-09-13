@@ -38,6 +38,8 @@ module.exports = class Deck {
   // returns the card based upon which card was selected.  If 0 was passed, the top of the deck would be returned
   pickACardAnyCard(whichCard) {
     console.log('Your card is the: ' + theDeck[whichCard].showCard());
+    theDeck.splice(whichCard,1);
+    console.log('There are now only ' + theDeck.length + ' cards in the deck');
   }
 
   shuffleDeck() {
